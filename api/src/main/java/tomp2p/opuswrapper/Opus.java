@@ -25,7 +25,7 @@ import java.nio.ShortBuffer;
  * Github repo.
  */
 public interface Opus extends Library {
-    public static final Opus INSTANCE = (Opus)Native.loadLibrary(System.getProperty("opus.lib"), Opus.class);
+    public static final Opus INSTANCE = (Opus) Native.load(System.getProperty("opus.lib"), Opus.class);
 
     //  ****** Constants
 

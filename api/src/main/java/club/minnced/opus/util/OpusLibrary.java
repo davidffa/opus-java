@@ -107,6 +107,10 @@ public final class OpusLibrary {
             //The libraries that this is referencing are available in the src/main/resources/natives/ folder.
             //Of course, when the jar is compiled that just becomes /natives/
             String platform = Platform.RESOURCE_PREFIX;
+            // We use a universal darwin native library
+            if (platform.startsWith("darwin"))
+                platform = "darwin";
+
             String ext = platforms.get(platform);
             if (ext == null)
                 throw new UnsupportedOperationException(SUPPORTED_SYSTEMS);
